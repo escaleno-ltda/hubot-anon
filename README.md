@@ -1,52 +1,30 @@
-Hubot Anonymous Post
-====================
-post as hubot
+# hubot-anon
 
-[![Build Status](https://travis-ci.org/shokai/hubot-anonymous-post.svg?branch=master)](https://travis-ci.org/shokai/hubot-anonymous-post)
+[![npm version](https://img.shields.io/npm/v/hubot-anon.svg?style=flat-square)](https://www.npmjs.com/package/hubot-anon)
+[![npm downloads](https://img.shields.io/npm/dm/hubot-anon.svg?style=flat-square)](https://www.npmjs.com/package/hubot-anon)
+[![Build Status](https://img.shields.io/travis/lgaticaq/hubot-anon.svg?style=flat-square)](https://travis-ci.org/lgaticaq/hubot-anon)
+[![Coverage Status](https://img.shields.io/coveralls/lgaticaq/hubot-anon/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/hubot-anon?branch=master)
+[![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/hubot-anon.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/hubot-anon)
+[![dependency Status](https://img.shields.io/david/lgaticaq/hubot-anon.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-anon#info=dependencies)
+[![devDependency Status](https://img.shields.io/david/dev/lgaticaq/hubot-anon.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-anon#info=devDependencies)
 
-- https://github.com/shokai/hubot-anonymous-post
-- https://www.npmjs.org/package/hubot-anonymous-post
+> A Hubot script to send anonymous messages
 
-
-Install
--------
-
-    % npm install hubot-anonymous-post -save
-
-### edit `external-script.json`
-
-```json
-[ "hubot-anonymous-post" ]
+## Installation
+```bash
+npm i -S hubot-anon
 ```
 
-### Configure (ENV var)
+Optional set environment variable *HUBOT_ANON_TO* to replace default channel (#random).
 
-    export HUBOT_ANON_TO=general  # default room
+add `["hubot-anon"]` to `external-scripts.json`.
 
-    # on heroku
-    heroku config:set HUBOT_ANON_TO=general
+## Examples
 
+`hubot anon <message>` -> `Send message to default channel`
 
-Usage
------
+`hubot anon <#channel> <message>` -> `Send message to #channel`
 
-    hubot anon <MESSAGE>
-    # or
-    hubot anon #room_name <MESSAGE>
+## License
 
-### send
-
-![post](http://gyazo.com/9e427fed83d69b36cb77f23c4819b0b6.png)
-
-### result
-
-![result](http://gyazo.com/3d7be4bfee20557be683bccfe005f54f.png)
-
-Test
-----
-
-    % npm install
-
-    % grunt
-    # or
-    % npm test
+[MIT](https://tldrlegal.com/license/mit-license)
