@@ -1,6 +1,6 @@
 {
   "name": "hubot-anon",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A Hubot script to send anonymous messages",
   "main": "src",
   "scripts": {
