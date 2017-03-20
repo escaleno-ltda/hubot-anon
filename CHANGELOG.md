@@ -1,3 +1,23 @@
+## 1.0.0 (2017-3-20)
+
+##### Chores
+
+* **package:**
+  * Add yarn.lock ([665cbec2](https://github.com/lgaticaq/hubot-anon/commit/665cbec27e9b40caa0103cf2ee4a12379f06390d))
+  * Update dependencies ([cb65b6cf](https://github.com/lgaticaq/hubot-anon/commit/cb65b6cf9f3ab1f7094b9ee961123984714fb879))
+  * update coffee-coverage to version 2.0.0 ([4967b164](https://github.com/lgaticaq/hubot-anon/commit/4967b1647571f2360959c30fd36a14a327d9f988))
+* **travis:** Add cache yarn ([7816b7e3](https://github.com/lgaticaq/hubot-anon/commit/7816b7e3a6c89602684cc2c4525a09f62c5861ea))
+* **nvm:** Update to node version v7 ([0f400090](https://github.com/lgaticaq/hubot-anon/commit/0f400090a8a710c344aa9b5b783633f3e9418979))
+* **npm:** Update .npmignore ([83006875](https://github.com/lgaticaq/hubot-anon/commit/83006875d4f182fc2cf75cdc4d095eac6caf23d3))
+
+##### Documentation Changes
+
+* **LICENSE:** Update year ([902f73f3](https://github.com/lgaticaq/hubot-anon/commit/902f73f39d039d54341f5c505b927f1a81b4c9e6))
+
+##### Bug Fixes
+
+* **src:** Replace send message to native. Fix #2 ([7abb30d2](https://github.com/lgaticaq/hubot-anon/commit/7abb30d2b36e0a9e3c5c55dad9244874d1702bbd))
+
 #### 0.0.4 (2016-10-6)
 
 ##### Chores
