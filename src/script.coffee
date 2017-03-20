@@ -1,5 +1,8 @@
-# Description:
+# Description
 #   A Hubot script to send anonymous messages
+#
+# Dependencies:
+#   None
 #
 # Configuration:
 #   HUBOT_ANON_TO
@@ -9,19 +12,21 @@
 #   hubot anon <#channel> <message> - Send message to #channel
 #
 # Author:
-#   @lgatica
+#   lgaticaq
 
 module.exports = (robot) ->
   robot.respond /anon (.+)$/i, (res) ->
-    from = res.message.user.name
     args = res.match[1].trim().split(/\s+/)
-    to = args[0]
-    channel = robot.adapter.client.rtm.dataStore.getChannelByName(to)
-    if typeof channel is "undefined"
-      to = process.env.HUBOT_ANON_TO or "random"
-      channel = robot.adapter.client.rtm.dataStore.getChannelByName(to)
+    channel = args[0]
+    unless /^#/.test(channel)
+      channel = process.env.HUBOT_ANON_TO or "#random"
     else
       args.shift()
     text = args.join(" ")
-    robot.messageRoom channel.id, text
-    res.send """@#{from} send "#{text}" to ##{channel.name}"""
+    try
+      robot.messageRoom(channel, text)
+      from = res.message.user.name
+      res.send("""@#{from} send "#{text}" to #{channel}""")
+    catch err
+      res.reply("an error has occurred: #{err.message}")
+      robot.emit("error", err)
