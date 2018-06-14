@@ -21,7 +21,7 @@ add `["hubot-anon"]` to `external-scripts.json`.
 
 ## Examples
 
-`hubot anon <message>` -> `Send message to default channel`
+`hubot anon <message>` -> `Send message to the default channel`
 
 `hubot anon <#channel> <message>` -> `Send message to #channel`
 
