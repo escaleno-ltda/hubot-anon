@@ -15,13 +15,13 @@
 npm i -S hubot-anon
 ```
 
-Optional set environment variable *HUBOT_ANON_TO* to replace default channel (#random).
+Optional set environment variable *HUBOT_ANON_TO* to replace default channel (#general).
 
 add `["hubot-anon"]` to `external-scripts.json`.
 
 ## Examples
 
-`hubot anon <message>` -> `Send message to default channel`
+`hubot anon <message>` -> `Send message to the default channel`
 
 `hubot anon <#channel> <message>` -> `Send message to #channel`
 

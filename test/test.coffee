@@ -15,34 +15,34 @@ describe "hubot-anon", ->
       @room.user.say("user", "hubot anon hello world")
       setTimeout(done, 100)
 
-    it "should get a message in #random", ->
+    it "should get a message in #general", ->
       expect(@room.messages).to.eql([
         ["user", "hubot anon hello world"]
         ["hubot", "hello world"]
-        ["hubot", """@user send "hello world" to #random"""]
+        ["hubot", """anonymous message to #general: hello world"""]
       ])
 
   context "valid channel", ->
     beforeEach (done) ->
-      @room.user.say("user", "hubot anon #general hello world")
+      @room.user.say("user", "hubot anon #random hello world")
       setTimeout(done, 100)
 
-    it "should get a message in #general", ->
+    it "should get a message in #random", ->
       expect(@room.messages).to.eql([
-        ["user", "hubot anon #general hello world"]
+        ["user", "hubot anon #random hello world"]
         ["hubot", "hello world"]
-        ["hubot", """@user send "hello world" to #general"""]
+        ["hubot", """anonymous message to #random: hello world"""]
       ])
 
   context "replace default channel", ->
     beforeEach (done) ->
-      process.env.HUBOT_ANON_TO = "#general"
+      process.env.HUBOT_ANON_TO = "#default"
       @room.user.say("user", "hubot anon hello world")
       setTimeout(done, 100)
 
-    it "should get a message in #general", ->
+    it "should get a message in #default", ->
       expect(@room.messages).to.eql([
         ["user", "hubot anon hello world"]
         ["hubot", "hello world"]
-        ["hubot", """@user send "hello world" to #general"""]
+        ["hubot", """anonymous message to #default: hello world"""]
       ])
