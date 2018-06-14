@@ -1,3 +1,11 @@
+## 2.0.0 (2018-6-14)
+
+##### Chores
+
+* **package:**
+  * update codeclimate-test-reporter to version 0.5.0 ([5c668bf8](https://github.com/lgaticaq/hubot-anon/commit/5c668bf8861424858f2ebc7a373c993649bf6611))
+  * update chai to version 4.0.0 ([5061a982](https://github.com/lgaticaq/hubot-anon/commit/5061a982440be9032551c164af6eb895a5ce1403))
+
 ## 1.0.0 (2017-3-20)
 
 ##### Chores
