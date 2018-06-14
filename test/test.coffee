@@ -44,5 +44,5 @@ describe "hubot-anon", ->
       expect(@room.messages).to.eql([
         ["user", "hubot anon hello world"]
         ["hubot", "hello world"]
-        ["hubot", """anonymous message to #general: hello world"""]
+        ["hubot", """anonymous message to #default: hello world"""]
       ])
